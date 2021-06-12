@@ -4,7 +4,6 @@ from .forms import *
 from django.http import HttpResponseRedirect
 from .models import *
 from django.urls import reverse_lazy
-from django.contrib.postgres.search import SearchVector
 # Create your views here.
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.views.decorators.csrf import csrf_exempt
@@ -205,13 +204,6 @@ class  CategoryView(LoginRequiredMixin,View):
             if clans is None:
                 return render(request,self.template_name,{'clans':None})    
             return render(request,self.template_name,{'clans':clans})
-        
-class SearchView(LoginRequiredMixin,View): 
-      template_name = 'Tube/search.html'
-
-      def get(self, request):
-         clans = Clan.objects.annotate(search=SearchVector('name','description')).filter(search=request.GET.get('q'))
-         return render(request,self.template_name,{'clans':clans})
     
 class RegisterView(View):
      template_name="Tube/register.html"     

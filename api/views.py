@@ -6,7 +6,7 @@ from django.core.exceptions import SuspiciousOperation
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
-from Tube.models import Clan, Link,DeviceId
+from Tube.models import Clan, Link
 from django.shortcuts import get_object_or_404
 from django.contrib.auth import login
 import datetime

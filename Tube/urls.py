@@ -2,7 +2,7 @@ from django.urls import path
 from .views import HomeView,ClanCreateView,ClanEditView,ClanDeleteView
 from .views  import LinkCreateView,LinkEditView,LinkDeleteView,RegisterView,NotificationView,ProfileView,ClanDetailView
 from django.contrib.auth.views import LoginView,LogoutView
-from .views import join,remove,like,CategoryView,SearchView,remove_notif,remove_all,CommentView,follow
+from .views import join,remove,like,CategoryView,remove_notif,remove_all,CommentView,follow
 urlpatterns = [
     path('',HomeView.as_view(),name='home'),
     path('clan/<int:pk>/',ClanDetailView.as_view(),name='detail-view'),
@@ -21,7 +21,6 @@ urlpatterns = [
     path('remove/',remove,name='remove'),
     path('like/',like,name='like'),
     path('clan/category/', CategoryView.as_view(),name='category-view'),
-    path('clan/search/',SearchView.as_view(),name='search-view'),
     path('clan/<int:pk>/comment/',CommentView.as_view(),name='comment'),
     path('follow/',follow,name='follow'),
     
