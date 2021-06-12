@@ -1,1 +1,1 @@
-web: gunicorn --chdir tubecate tubecate.wsgi --log-file -
+web: gunicorn tubecate.wsgi --log-file -
