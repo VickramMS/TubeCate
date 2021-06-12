@@ -1,1 +1,1 @@
-web: gunicorn tubecate.wsgi --log-file -
+web: gunicorn TubeCate.wsgi --log-file -

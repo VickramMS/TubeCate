@@ -44,7 +44,7 @@ def like_notification(sender,receiver,name):
 
         }
     }
-    response = requests.post('https://fcm.googleapis.com/v1/projects/tubecate-dzhz1/messages:send',
+    response = requests.post('https://fcm.googleapis.com/v1/projects/TubeCate-dzhz1/messages:send',
     json=body,
     headers=headers
     
@@ -72,7 +72,7 @@ def join_notification(sender,receiver,name):
 
         }
     }
-    response = requests.post('https://fcm.googleapis.com/v1/projects/tubecate-dzhz1/messages:send',
+    response = requests.post('https://fcm.googleapis.com/v1/projects/TubeCate-dzhz1/messages:send',
     json=body,
     headers=headers
     
